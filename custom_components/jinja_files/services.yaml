@@ -15,3 +15,13 @@ render:
       example: docs/*.md.j2
       selector:
         text:
+    override:
+      name: Override existing files
+      description: >-
+        Whether to overwrite output files that already exist. When disabled
+        (the default), templates whose output file is already present are
+        skipped instead of being overwritten.
+      required: false
+      default: false
+      selector:
+        boolean:

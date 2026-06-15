@@ -59,6 +59,7 @@ CONFIG_SCHEMA = vol.Schema(
 RENDER_SCHEMA = vol.Schema(
     {
         vol.Optional("path"): cv.string,
+        vol.Optional("override", default=False): cv.boolean,
     }
 )
 
@@ -114,8 +115,9 @@ async def _async_register_services(hass: HomeAssistant) -> None:
 
     async def service_render(call: ServiceCall) -> None:
         path = call.data.get("path")
+        override = call.data.get("override", False)
         try:
-            await render_all(hass, only=path)
+            await render_all(hass, only=path, override=override)
         except Exception:  # noqa: BLE001 — log everything so the user sees it
             LOGGER.exception("jinja_files.render failed")
 
@@ -129,12 +131,17 @@ async def _async_register_services(hass: HomeAssistant) -> None:
 # ---------------------------------------------------------------------------
 
 
-async def render_all(hass: HomeAssistant, only: str | None = None) -> None:
+async def render_all(
+    hass: HomeAssistant, only: str | None = None, override: bool = False
+) -> None:
     """Render every `.j2` under `templates/`.
 
     If `only` is given it is matched against each template's path relative to
     `templates/` as a wildcard pattern (`*`, `?`, `[...]`). A plain path with
     no wildcards still matches that single file, e.g. `docs/index.md.j2`.
+
+    If `override` is `False`, templates whose output file already exists are
+    skipped instead of being overwritten.
     """
     templates_dir = Path(hass.config.path(TEMPLATES_DIR_NAME))
     if not templates_dir.is_dir():
@@ -184,6 +191,7 @@ async def render_all(hass: HomeAssistant, only: str | None = None) -> None:
     config_dir = Path(hass.config.path()).resolve()
     rendered = 0
     failed = 0
+    skipped = 0
 
     for src in files:
         rel = src.relative_to(templates_dir)
@@ -199,6 +207,11 @@ async def render_all(hass: HomeAssistant, only: str | None = None) -> None:
                 "Refusing to write outside config dir: %s -> %s", rel, dest
             )
             failed += 1
+            continue
+
+        if not override and dest.exists():
+            LOGGER.info("skipped %s -> %s (already exists)", rel, dest_rel)
+            skipped += 1
             continue
 
         try:
@@ -218,8 +231,9 @@ async def render_all(hass: HomeAssistant, only: str | None = None) -> None:
         rendered += 1
 
     LOGGER.info(
-        "jinja_files: %d rendered, %d failed, %d total",
+        "jinja_files: %d rendered, %d skipped, %d failed, %d total",
         rendered,
+        skipped,
         failed,
         len(files),
     )

@@ -34,3 +34,15 @@ service: jinja_files.render
 data:
   path: docs/*.md.j2         # every .md.j2 under templates/docs/
 ```
+
+### Overriding existing files
+
+By default the service **skips** templates whose output file already exists, so
+re-running it never clobbers files you've since edited by hand. Pass
+`override: true` to overwrite existing outputs:
+
+```yaml
+service: jinja_files.render
+data:
+  override: true             # overwrite outputs that already exist
+```

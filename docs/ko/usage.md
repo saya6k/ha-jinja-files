@@ -34,3 +34,15 @@ service: jinja_files.render
 data:
   path: docs/*.md.j2         # templates/docs/ 아래의 .md.j2 전부
 ```
+
+### 기존 파일 덮어쓰기
+
+기본적으로 서비스는 출력 파일이 이미 존재하면 해당 템플릿을 **건너뜁니다**. 따라서
+다시 실행해도 직접 수정한 파일을 덮어쓰지 않습니다. 기존 출력을 덮어쓰려면
+`override: true`를 전달하세요:
+
+```yaml
+service: jinja_files.render
+data:
+  override: true             # 이미 존재하는 출력 파일도 덮어씀
+```

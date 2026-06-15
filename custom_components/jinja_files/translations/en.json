@@ -19,6 +19,10 @@
         "path": {
           "name": "Template path",
           "description": "Optional single template path, relative to the templates/ directory."
+        },
+        "override": {
+          "name": "Override existing files",
+          "description": "Overwrite output files that already exist. Disabled by default — existing files are skipped."
         }
       }
     }
