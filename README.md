@@ -46,6 +46,14 @@ data:
   path: docs/index.md.j2     # relative to templates/
 ```
 
+By default, outputs that already exist are **skipped**. Pass `override: true` to overwrite them:
+
+```yaml
+service: jinja_files.render
+data:
+  override: true
+```
+
 ## Installation
 
 1. Add this repo as a HACS custom repository (Integration category).
