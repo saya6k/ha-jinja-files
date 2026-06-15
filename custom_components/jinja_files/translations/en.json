@@ -1,0 +1,26 @@
+{
+  "title": "Jinja Files",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Jinja Files",
+        "description": "Adds the jinja_files.render service. No configuration needed — drop .j2 files under the templates/ directory and call the service."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Jinja Files is already configured."
+    }
+  },
+  "services": {
+    "render": {
+      "name": "Render templates",
+      "description": "Render every .j2 file under the templates/ directory to its corresponding location.",
+      "fields": {
+        "path": {
+          "name": "Template path",
+          "description": "Optional single template path, relative to the templates/ directory."
+        }
+      }
+    }
+  }
+}

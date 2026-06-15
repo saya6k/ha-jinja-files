@@ -1,0 +1,21 @@
+[project]
+site_name = "Jinja Files"
+site_url = "https://saya6k.github.io/ha-jinja-files/ko/"
+site_description = "HA 상태·애드온·HACS 컴포넌트를 컨텍스트로 사용해 <config>/templates/ 아래 모든 .j2 템플릿을 렌더링하는 Home Assistant 커스텀 통합."
+docs_dir = "docs/ko"
+site_dir = "site/ko"
+repo_url = "https://github.com/saya6k/ha-jinja-files"
+edit_uri = "edit/main/docs/ko/"
+
+[project.theme]
+language = "ko"
+
+[[project.extra.alternate]]
+name = "English"
+link = "https://saya6k.github.io/ha-jinja-files/en/"
+lang = "en"
+
+[[project.extra.alternate]]
+name = "한국어"
+link = "https://saya6k.github.io/ha-jinja-files/ko/"
+lang = "ko"

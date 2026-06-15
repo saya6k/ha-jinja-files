@@ -1,0 +1,17 @@
+render:
+  name: Render templates
+  description: >-
+    Render every .j2 file under the templates/ directory into the
+    corresponding location (with the .j2 suffix stripped). Pass `path` to
+    render a subset of templates.
+  fields:
+    path:
+      name: Template path
+      description: >-
+        Optional path or wildcard pattern (*, ?, [...]) of the templates to
+        render, relative to the templates/ directory. A plain path renders a
+        single template. Examples - docs/index.md.j2 or docs/*.md.j2
+      required: false
+      example: docs/*.md.j2
+      selector:
+        text:

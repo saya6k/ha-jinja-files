@@ -1,0 +1,21 @@
+[project]
+site_name = "Jinja Files"
+site_url = "https://saya6k.github.io/ha-jinja-files/en/"
+site_description = "A Home Assistant custom integration that renders every .j2 template under <config>/templates/ using HA state, add-ons, and HACS components as context."
+docs_dir = "docs/en"
+site_dir = "site/en"
+repo_url = "https://github.com/saya6k/ha-jinja-files"
+edit_uri = "edit/main/docs/en/"
+
+[project.theme]
+language = "en"
+
+[[project.extra.alternate]]
+name = "English"
+link = "https://saya6k.github.io/ha-jinja-files/en/"
+lang = "en"
+
+[[project.extra.alternate]]
+name = "한국어"
+link = "https://saya6k.github.io/ha-jinja-files/ko/"
+lang = "ko"

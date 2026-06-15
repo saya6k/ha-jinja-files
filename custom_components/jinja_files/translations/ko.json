@@ -1,0 +1,26 @@
+{
+  "title": "Jinja Files",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Jinja Files 설정",
+        "description": "jinja_files.render 서비스를 등록합니다. 별도 설정은 필요 없습니다 — templates/ 디렉터리 아래에 .j2 파일을 두고 서비스를 호출하세요."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Jinja Files는 이미 설정되어 있습니다."
+    }
+  },
+  "services": {
+    "render": {
+      "name": "템플릿 렌더",
+      "description": "templates/ 디렉터리의 모든 .j2 파일을 대응 위치로 렌더링합니다.",
+      "fields": {
+        "path": {
+          "name": "템플릿 경로",
+          "description": "단일 템플릿만 렌더할 때 사용. templates/ 디렉터리 기준 상대 경로."
+        }
+      }
+    }
+  }
+}

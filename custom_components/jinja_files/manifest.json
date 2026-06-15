@@ -1,0 +1,13 @@
+{
+    "domain": "jinja_files",
+    "name": "Jinja Files",
+    "codeowners": ["@saya6k"],
+    "config_flow": true,
+    "dependencies": [],
+    "documentation": "https://github.com/saya6k/ha-jinja-files",
+    "integration_type": "service",
+    "iot_class": "calculated",
+    "issue_tracker": "https://github.com/saya6k/ha-jinja-files/issues",
+    "requirements": [],
+    "version": "0.1.0"
+}
