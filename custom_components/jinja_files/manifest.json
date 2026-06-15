@@ -1,6 +1,7 @@
 {
     "domain": "jinja_files",
     "name": "Jinja Files",
+    "after_dependencies": ["hassio"],
     "codeowners": ["@saya6k"],
     "config_flow": true,
     "dependencies": [],
