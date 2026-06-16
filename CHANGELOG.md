@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/saya6k/ha-jinja-files/compare/jinja_files-v1.0.1...jinja_files-v1.0.2) (2026-06-16)
+
+
+### Bug Fixes
+
+* **manifest:** point documentation at the published docs site ([e1b23e8](https://github.com/saya6k/ha-jinja-files/commit/e1b23e8d1e6d1cb79318401039d0b8d10cc42b09))
+
 ## [1.0.1](https://github.com/saya6k/ha-jinja-files/compare/jinja_files-v1.0.0...jinja_files-v1.0.1) (2026-06-16)
 
 
