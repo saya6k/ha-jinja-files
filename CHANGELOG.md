@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/saya6k/ha-jinja-files/compare/jinja_files-v1.0.0...jinja_files-v1.0.1) (2026-06-16)
+
+
+### CI
+
+* pass a PAT to release-please so the release PR runs CI ([#3](https://github.com/saya6k/ha-jinja-files/issues/3)) ([278617a](https://github.com/saya6k/ha-jinja-files/commit/278617a7faac87560bd0c3e8678550f7cd93e6fa))
+
 ## [1.0.0](https://github.com/saya6k/ha-jinja-files/compare/jinja_files-v0.1.0...jinja_files-v1.0.0) (2026-06-15)
 
 
