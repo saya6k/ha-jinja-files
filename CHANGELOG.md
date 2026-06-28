@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/saya6k/ha-jinja-files/compare/jinja_files-v1.0.2...jinja_files-v1.0.3) (2026-06-28)
+
+
+### Documentation
+
+* add HACS My Home Assistant badge to README ([#7](https://github.com/saya6k/ha-jinja-files/issues/7)) ([c113c51](https://github.com/saya6k/ha-jinja-files/commit/c113c51040f82a1546dc99dac121e9376eb8af39))
+
 ## [1.0.2](https://github.com/saya6k/ha-jinja-files/compare/jinja_files-v1.0.1...jinja_files-v1.0.2) (2026-06-16)
 
 
