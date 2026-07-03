@@ -57,6 +57,20 @@ zensical.{en,ko}.toml            Zensical site config
   `hacs_components` renders to `README.md` with values filled in.
 - `path:` parameter renders only the named template.
 
+## Release workflow
+
+This repo (and other `ha-*` HACS components, excluding `ha-app*`) ships on a
+two-track rolling draft release, maintained by release-drafter since
+`ef6c7e1` (#11): an `rc` (prerelease) draft and a `stable` draft, both
+updated continuously as PRs merge to `main`.
+
+1. Verify locally with the devcontainer (`scripts/develop`) before merging —
+   see Sanity checks above.
+2. Once merged and the `rc` draft looks right, publish it as a prerelease
+   from the GitHub Releases UI.
+3. After the prerelease has been exercised with no issues, promote/publish
+   the corresponding `stable` draft.
+
 ## Don'ts
 
 - **Don't reintroduce the `README.md`-only assumption** — the whole point of
