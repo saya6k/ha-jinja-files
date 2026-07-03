@@ -2,5 +2,7 @@
     "name": "Jinja Files",
     "render_readme": true,
     "homeassistant": "2024.1.0",
-    "content_in_root": false
+    "content_in_root": false,
+    "zip_release": true,
+    "filename": "jinja_files.zip"
 }
