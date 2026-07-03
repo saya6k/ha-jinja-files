@@ -24,9 +24,10 @@
 # Root doc + agent-dir symlink aliases
 !/AGENTS.md
 !/CLAUDE.md
-!/GEMINI.md
 !/.claude
-!/.gemini
+
+# GEMINI.md / .gemini may exist locally as the same kind of symlink alias,
+# but stay untracked (never whitelisted) — not every collaborator uses Gemini.
 
 # Noise inside tracked directories
 __pycache__/
@@ -38,3 +39,6 @@ __pycache__/
 /.agents/*
 !/.agents/skills/
 !/.agents/settings.json
+
+# Dev-only planning artifacts stay local and untracked (never whitelisted):
+#   SPEC.md, tasks/, plan.md, todo.md, spec/
