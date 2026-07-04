@@ -1,7 +1,7 @@
 {
-  "name": "ha-jinja-files-dev",
+  "name": "hacs-jinja-files-dev",
   "image": "mcr.microsoft.com/devcontainers/python:3-3.13-bookworm",
-  "runArgs": ["--hostname=ha-jinja-files-dev"],
+  "runArgs": ["--hostname=hacs-jinja-files-dev"],
   "postCreateCommand": "scripts/setup",
   "forwardPorts": [8123],
   "portsAttributes": {

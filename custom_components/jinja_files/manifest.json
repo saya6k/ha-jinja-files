@@ -9,10 +9,10 @@
   ],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://saya6k.github.io/ha-jinja-files/",
+  "documentation": "https://saya6k.github.io/hacs-jinja-files/",
   "integration_type": "service",
   "iot_class": "calculated",
-  "issue_tracker": "https://github.com/saya6k/ha-jinja-files/issues",
+  "issue_tracker": "https://github.com/saya6k/hacs-jinja-files/issues",
   "requirements": [],
   "version": "0.0.0"
 }

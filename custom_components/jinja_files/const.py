@@ -14,6 +14,6 @@ STARTUP_MESSAGE = (
     "----------------------------------------------------------------------\n"
     "  jinja_files — render every templates/*.j2 file into the config dir.\n"
     "  Service: jinja_files.render\n"
-    "  Source: https://github.com/saya6k/ha-jinja-files\n"
+    "  Source: https://github.com/saya6k/hacs-jinja-files\n"
     "----------------------------------------------------------------------"
 )
