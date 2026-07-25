@@ -99,6 +99,21 @@ async def async_setup_entry(
     return True
 
 
+async def async_unload_entry(
+    hass: HomeAssistant, config_entry: config_entries.ConfigEntry
+) -> bool:
+    """Unload the entry so it can be reloaded/removed without a restart."""
+    if config_entry.source == config_entries.SOURCE_IMPORT:
+        # The imported entry owns nothing — `async_setup_entry` returned
+        # early and the service belongs to the YAML `async_setup` path.
+        return True
+
+    if hass.services.has_service(DOMAIN, "render"):
+        hass.services.async_remove(DOMAIN, "render")
+    hass.data.pop(DOMAIN, None)
+    return True
+
+
 async def async_remove_entry(
     hass: HomeAssistant, config_entry: config_entries.ConfigEntry
 ) -> None:
