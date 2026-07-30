@@ -6,7 +6,6 @@
 # Tracked directories
 !/.github/
 !/.devcontainer/
-!/.agents/
 !/custom_components/
 !/docs/
 !/scripts/
@@ -21,24 +20,14 @@
 !/zensical.en.toml
 !/zensical.ko.toml
 
-# Root doc + agent-dir symlink aliases
-!/AGENTS.md
-!/CLAUDE.md
-!/.claude
-
-# GEMINI.md / .gemini may exist locally as the same kind of symlink alias,
-# but stay untracked (never whitelisted) — not every collaborator uses Gemini.
+# Agent scaffolding (AGENTS.md and its CLAUDE.md / GEMINI.md symlink aliases,
+# .agents/, .claude/, .gemini) is local-only and deliberately not whitelisted
+# above — it stays on each developer's machine, out of the published repo.
 
 # Noise inside tracked directories
 __pycache__/
 *.py[cod]
 .DS_Store
-
-# .agents: track only shared skills/ + settings.json
-# (settings.local.json is per-developer; notes/ are local decision logs)
-/.agents/*
-!/.agents/skills/
-!/.agents/settings.json
 
 # Dev-only planning artifacts stay local and untracked (never whitelisted):
 #   SPEC.md, tasks/, plan.md, todo.md, spec/
