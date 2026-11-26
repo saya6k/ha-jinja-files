@@ -54,6 +54,7 @@ data:
   override: true
 ```
 
+<!-- ha-marketplace:exclude-start -->
 ## Installation
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=saya6k&repository=ha-jinja-files&category=integration)
@@ -61,8 +62,12 @@ data:
 1. Add this repo as a HACS custom repository (Integration category).
 2. Install **Jinja Files**.
 3. Restart Home Assistant.
-4. Drop `*.j2` files under `<config>/templates/`.
-5. Call the service.
+<!-- ha-marketplace:exclude-end -->
+
+## Usage
+
+1. Drop `*.j2` files under `<config>/templates/`.
+2. Call the service.
 
 Automate it (e.g. nightly):
 
